@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: hsl(237, 12%, 33%);
 }
 
 body {
@@ -14,7 +15,7 @@ body {
 
 .card {
     width: 64%;
-    height: 64%;
+    height: 74%;
     background: white;
     margin: auto;
     margin-top: 15vh;
@@ -22,25 +23,41 @@ body {
     box-shadow: 0 16px 20px rgba(0, 0, 0, .3);
     display: flex;
     align-items: center;
-    /*overflow: hidden;*/
+    min-width: 860px;
 }
 
 .card .left{
-
     position: relative;
     width: 50%;
 }
 
-.left > * {
+/* .left > * {
     position: absolute;
 }
+*/
 
 
+#box {
+    position: absolute;
+    z-index: 3;
+    left: -130px;
+    top: 160px;
+}
 
 #pattern{
+    position: absolute;
     width: 200%;
-    top: -470px;
+    top: -260px;
     left: -540px;
+    z-index: 1;
+}
+
+#woman{
+    position: absolute;
+    width: 90%;
+    top: -60px;
+    left: -50px;
+    z-index: 2;
 }
 
 .card .right {
@@ -52,3 +69,39 @@ body {
     margin-bottom: 30px;
 }
 
+.right .menu {
+    width: 80%;
+}
+
+.menu .title {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.title:hover {
+    cursor: pointer;
+    color: hsl(14, 88%, 65%);
+}
+
+.title:hover h3 {
+    color: hsl(14, 88%, 65%);
+}
+
+.menu h3 {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 8px;
+}
+
+.menu p{
+    font-size: .8em;
+    color: hsl(240, 6%, 50%);
+    margin-top: 8px;
+}
+
+.menu > div {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding: 10px 0;
+
+}
